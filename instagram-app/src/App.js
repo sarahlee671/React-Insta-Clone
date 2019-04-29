@@ -1,27 +1,25 @@
 import React from 'react';
-import logo from './logo.svg';
+
 import './App.css';
 import dummyData from './dummy-data';
+import Post from './components/PostContainer/Post'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      post: dummyData
+    };
+  }
+
+  render() {
+    return (
+      <div className="App">
+        <Post post={this.state.post} />
+      </div>
+    )
+  }
+
+
 }
-
 export default App;
