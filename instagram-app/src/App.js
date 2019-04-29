@@ -8,14 +8,17 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      post: dummyData
+      posts: dummyData
     };
   }
 
   render() {
+    const posts = this.state.posts.map(post=>{
+      return <Post post={post} />
+    })
     return (
       <div className="App">
-        <Post post={this.state.post} />
+        {posts}
       </div>
     )
   }
