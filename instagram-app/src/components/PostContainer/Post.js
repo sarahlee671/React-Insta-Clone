@@ -1,6 +1,8 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import PropTypes from 'prop-types';
+import '../PostContainer/PostContainer.css'
+import '../CommentSection/CommentSection.css'
 
 
 function Post(props) {
@@ -8,11 +10,17 @@ function Post(props) {
     return (
         <div key={props.post.username} className="post-container">
             <div className='container-header'>
-                <img src={props.post.thumbnailUrl} alt="thumbnail"/>
-                <h3>{props.post.username}</h3>
+                <img className="thumbnail" src={props.post.thumbnailUrl} alt="thumbnail"/>
+                <p>{props.post.username}</p>
             </div>
-            <img src={props.post.imageUrl} alt={props.post.username} />
-            <CommentSection comments={props.post.comments} />
+            <div className="post-image">
+                <img src={props.post.imageUrl} alt={props.post.username} />
+            </div>
+            <div className="comment-section">
+                <CommentSection comments={props.post.comments} />
+                <p className="date">{props.post.timestamp}</p>
+                <input className="input" type="text" placeholder="Add a comment" />
+            </div>
         </div>
     )
 }

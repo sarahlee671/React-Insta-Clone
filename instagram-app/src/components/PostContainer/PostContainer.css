@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+}
+
+.post-container {
+    width: 600px;
+    border: 1px solid gray;
+    margin: 20px;
+}
+
+.container-header {
+    display: flex;
+    width: 600px;
+    height: 60px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.container-header p {
+    font-weight: bold;
+}
+
+.thumbnail {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin: 15px;
+}
+
+.post-image img{
+    width: 600px;
+}
