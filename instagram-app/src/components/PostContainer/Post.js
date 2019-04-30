@@ -5,6 +5,7 @@ import '../PostContainer/PostContainer.css'
 import '../CommentSection/CommentSection.css'
 
 
+
 function Post(props) {
     console.log(props);
     return (
@@ -19,7 +20,8 @@ function Post(props) {
             <div className="comment-section">
                 <CommentSection comments={props.post.comments} />
                 <p className="date">{props.post.timestamp}</p>
-                <input className="input" type="text" placeholder="Add a comment" />
+                
+        
             </div>
         </div>
     )
