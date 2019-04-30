@@ -8,8 +8,15 @@ class App extends React.Component {
   constructor() {
     super();
     this.state = {
-      posts: dummyData
+      posts: []
     };
+  }
+
+  componentDidMount() {
+    console.log('App: CDM running');
+    this.setState({
+      posts: dummyData
+    });
   }
 
   render() {
