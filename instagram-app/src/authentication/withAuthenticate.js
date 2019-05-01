@@ -4,7 +4,12 @@ const withAuthenticate = PostsPage =>
   class extends React.Component {
     render() {
         const postsPage = <PostsPage {...this.props} />;
-        return postsPage
+        const toShow = if(imLoggedIn) {
+          return postsPage
+        } else {
+          return loginPage
+        }
+        return toShow
     }
   };
 
