@@ -1,6 +1,7 @@
 import React from 'react';
 import Heart from '../../assets/image/heart.png';
 import Comment from '../../assets/image/comment.png';
+import './PostContainer.css';
 const Likes = props => {
   return [
     <div className="likes" key="likes-icons" onClick={props.incrementLike}>

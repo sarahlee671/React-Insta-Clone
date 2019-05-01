@@ -30,3 +30,7 @@
 .post-image img{
     width: 600px;
 }
+
+.like-container {
+    display: flex;
+}
