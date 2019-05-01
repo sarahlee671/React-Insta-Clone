@@ -14,7 +14,7 @@ const SearchBar = props => {
                 <img className="instagram" src={Instagram2} alt="instagram" /> 
             </div>
             <div>
-                <input type="text" placeholder="Search" />
+                <input type="text" placeholder="Search" value={props.searchTerm} onChange={props.searchPosts} />
             </div>
             <div className="icon-container">
                 <div className="icon">
