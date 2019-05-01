@@ -1,0 +1,36 @@
+.search-container {
+    width: 800px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    line-height: 60px;
+    background: white;
+    border-bottom: 1px solid black;
+    align-items: center;
+}
+
+.instagram-container {
+    display: flex;
+    height: 60px;
+    align-items: center;
+}
+.instagram-logo {
+    width: 30px;
+    margin-left: 20px;
+
+}
+.instagram {
+    width: 100px;
+    margin: 10px;
+}
+
+
+.icon-container {
+    display: flex;
+}
+
+.icon {
+    width: 50px;
+    height: 50px;
+
+}
