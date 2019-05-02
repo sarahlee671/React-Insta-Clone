@@ -17,15 +17,15 @@ class Login extends Component {
     }
 
     login = e => {
-        e.preventDefault();
-        username
+        localStorage.setItem({username: this.state.username });
+        window.location.reload();
     }
 
 
     render() {
         return (
             <div className="login">
-                <form>
+                <form onSubmit={this.login}>
                     <input
                         className="login-input"
                         value={this.state.username} 
@@ -39,7 +39,7 @@ class Login extends Component {
                         placeholder="password"
                         onChange={this.handlePassword}
                     />
-                    <button>Login</button>
+                    <button onClick={this.login}>Login</button>
                 </form>
             </div>
         )

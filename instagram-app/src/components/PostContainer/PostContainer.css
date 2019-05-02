@@ -31,6 +31,12 @@
     width: 600px;
 }
 
-.like-container {
+.likes {
     display: flex;
+    margin: 5px;
+}
+
+.comment-icon {
+    margin-left: 10px;
+    margin-top: 3px;
 }
