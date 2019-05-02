@@ -3,25 +3,25 @@
     box-sizing: border-box;
 }
 
-.comment-section {
+/* .comment-section {
 width: 400px;
 margin: auto;
-}
+}  */
 
-.comment-section p{
+/* .comment-section p{
     margin-left: 10px;
     font-size: 12px;
 
-}
+} */
 
-.input {
+/* .input {
     width: 370px;
     height: 50px;
     border: none;
     border-top: 1px solid gray;
     margin: 10px;
     
-}
+} */
 
 .username {
     font-weight: bold;

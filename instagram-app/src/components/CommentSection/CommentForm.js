@@ -1,4 +1,14 @@
 import React from "react";
+import styled from 'styled-components';
+
+const Input = styled.input`
+    width: 370px;
+    height: 50px;
+    border: none;
+    border-top: 1px solid gray;
+    margin: 10px;
+`;
+
 
 
 class CommentForm extends React.Component {
@@ -22,7 +32,7 @@ class CommentForm extends React.Component {
     render() {
         return (
             < form className="form" onSubmit={this.submitComment} >
-                <input className="input" placeholder="Add a comment" type="text" value={this.state.inputValue} onChange={this.handleChanges} />
+                <Input className="input" placeholder="Add a comment" type="text" value={this.state.inputValue} onChange={this.handleChanges} />
                 
   
             </form >

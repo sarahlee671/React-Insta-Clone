@@ -1,5 +1,19 @@
 import React from 'react';
 import CommentForm from '../CommentSection/CommentForm';
+import styled from 'styled-components';
+
+const CommentDiv = styled.div`
+    width: 400px;
+    margin: auto;
+`;
+
+const CommentP = styled.p`
+    margin-left: 10px;
+    font-size: 12px;
+`;
+
+
+
 
 class CommentSection extends React.Component {
     constructor(props) {
@@ -24,25 +38,25 @@ class CommentSection extends React.Component {
     };
     render() {
         return (
-            <div className="comment-section" >
+            <CommentDiv className="comment-section" >
                 {
                     this.props.comments.map(comment =>
                         <div>
-                            <p><span className='username'>{comment.username}</span> {comment.text}</p>
+                            <CommentP><span className='username'>{comment.username}</span> {comment.text}</CommentP>
                         </div>
                     )
                 }
                 {
                     this.state.comments.map(comment =>
                         <div>
-                            <p><span className='username'>{comment.username}</span> {comment.text}</p>
+                            <CommentP><span className='username'>{comment.username}</span> {comment.text}</CommentP>
                         </div>
                     )
                 }
 
                 < CommentForm addComment={this.addComment}/>
 
-            </div>
+            </CommentDiv>
         )
     }
 }
