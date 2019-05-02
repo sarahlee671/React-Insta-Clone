@@ -1,6 +1,6 @@
 import React from 'react'
 
-class Login extends Component {
+class Login extends React.Component {
     constructor() {
         super();
         this.state= {
@@ -17,8 +17,8 @@ class Login extends Component {
     }
 
     login = e => {
-        localStorage.setItem({username: this.state.username });
-        window.location.reload();
+        localStorage.setItem ('username', this.state.username);
+        
     }
 
 

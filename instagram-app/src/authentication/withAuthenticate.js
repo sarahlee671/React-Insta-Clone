@@ -1,4 +1,5 @@
 import React from 'react';
+import Login from '../components/Login/Login';
 
 const withAuthenticate = PostsPage => LoginPage =>
   class extends React.Component {
@@ -10,7 +11,8 @@ const withAuthenticate = PostsPage => LoginPage =>
     }
 
     componentDidMount() {
-      if(!localStorage.getItem('user')) {
+      console.log(localStorage.getItem('username'))
+      if(!localStorage.getItem('username')) {
         this.setState({ loggedIn: false});
       } else {
         this.setState({ loggedIn: true});
@@ -18,7 +20,7 @@ const withAuthenticate = PostsPage => LoginPage =>
     }
     render() {
       if (this.state.loggedIn) return <PostsPage />;
-      return <LoginPage />;
+      return <Login />;
     }
   };
 
