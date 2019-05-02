@@ -29,6 +29,7 @@ class Post extends React.Component {
                 <div>
                     <Likes incrementLike={this.incrementLike} likes={this.state.likes}/>
                 </div>
+                
                 <div className="comment-section">
                     <CommentSection comments={this.props.post.comments} />
                     <p className="date">{this.props.post.timestamp}</p>

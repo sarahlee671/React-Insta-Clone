@@ -12,7 +12,7 @@ class CommentSection extends React.Component {
 
     addComment = inputValue => {
         this.setState(state => {
-            const newComment = {username: "username", text: inputValue}
+            const newComment = {username: localStorage.getItem('username'), text: inputValue}
             const updatedComments = state.comments.concat(newComment)
             console.log(updatedComments)
             return {
@@ -28,14 +28,14 @@ class CommentSection extends React.Component {
                 {
                     this.props.comments.map(comment =>
                         <div>
-                            <p>{comment.username} {comment.text}</p>
+                            <p><span className='username'>{comment.username}</span> {comment.text}</p>
                         </div>
                     )
                 }
                 {
                     this.state.comments.map(comment =>
                         <div>
-                            <p>{comment.username} {comment.text}</p>
+                            <p><span className='username'>{comment.username}</span> {comment.text}</p>
                         </div>
                     )
                 }

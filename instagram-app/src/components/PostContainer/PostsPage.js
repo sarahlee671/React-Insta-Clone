@@ -11,6 +11,12 @@ class PostsPage extends React.Component {
             filteredPosts: []
         };
     }
+
+    logOut = e => {
+        e.preventDefault()
+        localStorage.removeItem('username')
+        window.location.reload();
+    }
     componentDidMount() {
         this.setState({
           posts: dummyData,
@@ -38,7 +44,7 @@ class PostsPage extends React.Component {
           })
         return(
             <div className="App">
-                <SearchBar searchTerm={this.state.searchTerm} searchPosts={this.searchPostsHandler} />
+                <SearchBar logOut={this.logOut} searchTerm={this.state.searchTerm} searchPosts={this.searchPostsHandler} />
                 {posts}
             </div>
 

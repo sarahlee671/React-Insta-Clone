@@ -3,14 +3,14 @@
 }
 
 .post-container {
-    width: 600px;
+    width: 400px;
     border: 1px solid gray;
-    margin: 20px;
+    margin: auto;
 }
 
 .container-header {
     display: flex;
-    width: 600px;
+    width: 400px;
     height: 60px;
     flex-wrap: wrap;
     align-items: center;
@@ -28,7 +28,7 @@
 }
 
 .post-image img{
-    width: 600px;
+    width: 400px;
 }
 
 .likes {
