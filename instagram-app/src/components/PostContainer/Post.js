@@ -1,9 +1,42 @@
 import React from 'react';
 import CommentSection from '../CommentSection/CommentSection';
 import PropTypes from 'prop-types';
+import styled from 'styled-components';
 import '../PostContainer/PostContainer.css'
 import '../CommentSection/CommentSection.css'
 import Likes from './Likes';
+
+const PostContainer= styled.div`
+    width: 400px;
+    border: 1px solid gray;
+    margin: auto;
+`;
+
+const ContainerHeader = styled.div`
+    display: flex;
+    width: 400px;
+    height: 50px;
+    flex-wrap: wrap;
+    align-items: center;
+`;
+
+const ContainerHeaderP = styled.div`
+    font-weight: bold;
+`;
+
+const ThumbnailImg = styled.img`
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin: 15px;
+`;
+
+
+const PostImage = styled.img`
+    width: 400px;
+`;
+
+
 
 class Post extends React.Component {
     constructor(props) {
@@ -18,13 +51,13 @@ class Post extends React.Component {
     };
     render() { 
         return(
-            <div key = { this.props.post.username } className = "post-container" >
-                <div className='container-header'>
-                    <img className="thumbnail" src={this.props.post.thumbnailUrl} alt="thumbnail" />
-                    <p>{this.props.post.username}</p>
-                </div>
+            <PostContainer key = { this.props.post.username } className = "post-container" >
+                <ContainerHeader className='container-header'>
+                    <ThumbnailImg className="thumbnail" src={this.props.post.thumbnailUrl} alt="thumbnail" />
+                    <ContainerHeaderP>{this.props.post.username}</ContainerHeaderP>
+                </ContainerHeader>
                 <div className="post-image">
-                    <img src={this.props.post.imageUrl} alt={this.props.post.username} />
+                    <PostImage src={this.props.post.imageUrl} alt={this.props.post.username} />
                 </div>
                 <div>
                     <Likes incrementLike={this.incrementLike} likes={this.state.likes}/>
@@ -36,7 +69,7 @@ class Post extends React.Component {
 
 
                 </div>
-            </div>
+            </PostContainer>
         )
     }
 }

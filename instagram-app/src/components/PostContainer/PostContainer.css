@@ -2,13 +2,13 @@
     box-sizing: border-box;
 }
 
-.post-container {
+/* .post-container {
     width: 400px;
     border: 1px solid gray;
     margin: auto;
-}
+} */
 
-.container-header {
+/* .container-header {
     display: flex;
     width: 400px;
     height: 60px;
@@ -18,18 +18,18 @@
 
 .container-header p {
     font-weight: bold;
-}
+} */
 
-.thumbnail {
+/* .thumbnail {
     border-radius: 50%;
     width: 30px;
     height: 30px;
     margin: 15px;
-}
+} */
 
-.post-image img{
+/* .post-image img{
     width: 400px;
-}
+} */
 
 .likes {
     display: flex;
