@@ -1,0 +1,42 @@
+* {
+    box-sizing: border-box;
+}
+
+/* .post-container {
+    width: 400px;
+    border: 1px solid gray;
+    margin: auto;
+} */
+
+/* .container-header {
+    display: flex;
+    width: 400px;
+    height: 60px;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.container-header p {
+    font-weight: bold;
+} */
+
+/* .thumbnail {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    margin: 15px;
+} */
+
+/* .post-image img{
+    width: 400px;
+} */
+
+.likes {
+    display: flex;
+    margin: 5px;
+}
+
+.comment-icon {
+    margin-left: 10px;
+    margin-top: 3px;
+}
